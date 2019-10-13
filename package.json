@@ -1,0 +1,54 @@
+{
+  "name": "nodejs-app",
+  "version": "1.0.0",
+  "private": true,
+  "author": "huydoansg",
+  "description": "Demostration nodejs app with mongoDB, unit test, api test, mock mongoDB, migration concept, saparate of concerns, deployment, monitoring with pm2 ...",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.9.1",
+    "yarn": "^1.17.3"
+  },
+  "scripts": {
+    "test": "npm run test",
+    "start": "node index.js",
+    "test:unit": "npm run test:unit",
+    "test:api": "mocha tests/**/*.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.1",
+    "nock": "^11.4.0",
+    "pm2": "^4.0.0"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "saparate",
+    "of",
+    "concerns",
+    "mvc",
+    "middleware",
+    "mongoose",
+    "orm",
+    "unit",
+    "test",
+    "api",
+    "test",
+    "monitoring",
+    "app",
+    "deployment",
+    "microservices"
+  ],
+  "license": "MIT"
+}
