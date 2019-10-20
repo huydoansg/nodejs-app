@@ -1,16 +1,15 @@
 process.env.NODE_ENV = 'test';
 
-const { initializeNocks, stopNocks } = require('../mocks/api.mock');
+const mocks = require('../mocks');
 const server = require('../../app');
 const apiDefaultTest = require('./default');
 
 describe("API Testing", () => {
-  before(() => {
-    initializeNocks();
+  before(async () => {
+    await mocks.initializeAll();
   })
   after(async () => {
-    // await mongoose.disconnect();
-    await stopNocks();
+    await mocks.stopAll();
   });
   context('Started testing APIs', () => {
     apiDefaultTest(server);

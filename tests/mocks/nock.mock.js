@@ -1,6 +1,6 @@
 const nock = require('nock');
 
-module.exports.initializeNocks = () => {
+module.exports.initialize = () => {
   nock('http://myhost.co')
     .get('/api')
     .reply(200, {
@@ -8,7 +8,7 @@ module.exports.initializeNocks = () => {
     });
 }
 
-module.exports.stopNocks = async () => {
+module.exports.stop = async () => {
   await nock.cleanAll();
   await nock.enableNetConnect();
 }
