@@ -13,7 +13,7 @@
     "test": "npm run test",
     "start": "node index.js",
     "test:unit": "npm run test:unit",
-    "test:api": "mocha tests/**/*.js"
+    "test:api": "mocha tests/**/*.js --exit"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

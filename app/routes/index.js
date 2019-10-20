@@ -5,9 +5,10 @@ const routes = express.Router();
 
 routes.get('/', async (req, res) => {
   await rp.get('http://myhost.co/api');
-  res.json({
-    message: 'Zoo'
-  })
+  res.status(200)
+    .json({
+      message: 'Zoo'
+    })
 })
 routes.get('/local', (req, res) => {
   res.json({ msg: 'Local Authentication' });

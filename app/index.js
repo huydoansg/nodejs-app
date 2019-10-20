@@ -8,11 +8,11 @@ const errorHandler = (err, req, res, next) => {
     message: 'Failed'
   });
 }
-const dbUri = 'mongodb://mongodb:27017/zooo';
-connectDB(dbUri)
-  .catch(err => {
-    console.error('what is fail ', err)
-  });
+const dbUri = 'mongodb://localhost:27017/zooo';
+// connectDB(dbUri);
+// .catch(err => {
+//   console.error('what is fail ', err)
+// });
 // module.exports.bootstrap = () => {
 
 // }
