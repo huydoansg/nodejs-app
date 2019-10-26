@@ -1,6 +1,6 @@
 const nock = require('nock');
 
-module.exports.initialize = () => {
+module.exports.start = () => {
   nock('http://myhost.co')
     .get('/api')
     .reply(200, {

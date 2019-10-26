@@ -1,12 +1,12 @@
-
 const mongoUnit = require('mongo-unit');
-const testData = require('./data/test.data.json');
+const { connect, disconnect } = require('../../app/repository/connection');
 
-module.exports.initialize = async () => {
-  const testMongoUrl = await mongoUnit.start();
-  mongoUnit.initDb(testMongoUrl, testData);
+module.exports.start = async () => {
+  const mongoUrl = await mongoUnit.start();
+  await connect(mongoUrl);
 }
 
 module.exports.stop = () => {
+  disconnect();
   mongoUnit.drop();
 }

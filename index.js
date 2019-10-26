@@ -1,4 +1,3 @@
-require('./app');
-// const { bootstrap } =
+const { bootstrap } = require('./app/bootstrap');
 
-// bootstrap();
+bootstrap();
