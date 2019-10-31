@@ -5,10 +5,6 @@
   "author": "huydoansg",
   "description": "Demostration nodejs app with mongoDB, unit test, api test, mock mongoDB, migration concept, saparate of concerns, deployment, monitoring with pm2 ...",
   "main": "index.js",
-  "engines": {
-    "node": ">=12.9.1",
-    "yarn": "^1.17.3"
-  },
   "scripts": {
     "test": "npm run test",
     "start": "node index.js",
